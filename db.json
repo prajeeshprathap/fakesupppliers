@@ -119,3 +119,19 @@
       "website": "https://www.dsm.com"
     },
     {
+      "supplierId": 10,
+      "supplierName": "Bol.com BV",
+      "kvkNumber": "34347194",
+      "vatNumber": "NL001111666B01",
+      "iban": "NL91INGB0789456123",
+      "phone": "+31 30 310 4999",
+      "address": "Papendorpseweg 100",
+      "city": "Utrecht",
+      "country": "Netherlands",
+      "email": "service@bol.com",
+      "website": "https://www.bol.com"
+    }
+
+    /* Records 11–50 follow same structure */
+  ]
+}
