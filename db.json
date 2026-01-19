@@ -27,6 +27,19 @@
       "website": "https://www.philips.com"
     },
     {
+      "supplierId": 12,
+      "supplierName": "Landmerc B.V",
+      "kvkNumber": "09118234",
+      "vatNumber": "NL809450410B01",
+      "iban": "NL60RABO0367060167",
+      "phone": "0317-415665",
+      "address": "Lawickse Allee 11, 6701 AN, Wageningen",
+      "city": "Wageningen",
+      "country": "Netherlands",
+      "email": "administratie@zilliz.nl",
+      "website": "www.landmerc.nl"
+    },
+    {
       "supplierId": 3,
       "supplierName": "Unilever Nederland BV",
       "kvkNumber": "30232361",
