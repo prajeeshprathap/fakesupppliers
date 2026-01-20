@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Fake Suppliers API",
+    "description": "API definition for retrieving supplier data from the fake suppliers server.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://my-json-server.typicode.com/prajeeshprathap/fakesupppliers",
+      "description": "Production Server"
+    }
+  ],
+  "paths": {
+    "/suppliers": {
+      "get": {
+        "summary": "Get list of suppliers",
+        "description": "Retrieve a list of suppliers. Supports filtering via query parameters.",
+        "parameters": [
+          {
+            "name": "supplierName_like",
+            "in": "query",
+            "description": "Filter suppliers by name (regex/partial match supported by json-server).",
+            "schema": {
+              "type": "string",
+              "example": "landmerc b.v"
+            }
+          },
+          {
+            "name": "supplierName",
+            "in": "query",
+            "description": "Filter suppliers by exact name match.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "city",
+            "in": "query",
+            "description": "Filter suppliers by city.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A JSON array of supplier objects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "supplierId": {
+                        "type": "integer",
+                        "description": "Unique identifier for the supplier",
+                        "example": 12
+                      },
+                      "supplierName": {
+                        "type": "string",
+                        "description": "Name of the supplier company",
+                        "example": "Landmerc B.V"
+                      },
+                      "kvkNumber": {
+                        "type": "string",
+                        "description": "Chamber of Commerce (KvK) number",
+                        "example": "09118234"
+                      },
+                      "vatNumber": {
+                        "type": "string",
+                        "description": "VAT identification number",
+                        "example": "NL809450410B01"
+                      },
+                      "iban": {
+                        "type": "string",
+                        "description": "International Bank Account Number",
+                        "example": "NL60RABO0367060167"
+                      },
+                      "phone": {
+                        "type": "string",
+                        "description": "Contact phone number",
+                        "example": "0317-415665"
+                      },
+                      "address": {
+                        "type": "string",
+                        "description": "Physical address",
+                        "example": "Lawickse Allee 11, 6701 AN, Wageningen"
+                      },
+                      "city": {
+                        "type": "string",
+                        "description": "City name",
+                        "example": "Wageningen"
+                      },
+                      "country": {
+                        "type": "string",
+                        "description": "Country name",
+                        "example": "Netherlands"
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email",
+                        "description": "Contact email address",
+                        "example": "administratie@zilliz.nl"
+                      },
+                      "website": {
+                        "type": "string",
+                        "description": "Company website URL",
+                        "example": "www.landmerc.nl"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
